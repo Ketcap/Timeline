@@ -24,11 +24,10 @@ $(document).ready(function(){
         var eleTop = $ele.offset().top;
         var eleBottom = eleTop + $ele.height();
 
-        /*return ((docViewTop < eleTop) && (docViewBottom > eleBottom));*/
-        return ((eleBottom <= docViewBottom) && (eleTop >= docViewTop));
+        return ((docViewTop < eleTop) && (docViewBottom > eleBottom));
+        /*return ((eleBottom <= docViewBottom) && (eleTop >= docViewTop));*/
     }
-    $(window).scroll(function(){
-        
+    function showElements(){
         $(".t-row > div").each(function(){
             _this = $(this);
             if(isScrolledIntoView(_this))
@@ -47,7 +46,10 @@ $(document).ready(function(){
                 })
             }
         })
-
+    }
+    showElements();
+    $(window).scroll(function(){
+        showElements();
     })
     
 })
