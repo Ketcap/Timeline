@@ -28,7 +28,7 @@
 .container {
     position: relative;
     width: 100%;
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
@@ -549,11 +549,15 @@ there.
     .timeline > .container:before {
         left: 5px !important ;
     }
+    .t-row > div > .icon-column{
+        display: none;
+    }
 }
 @media (max-width: 750px) {
     .timeline > .container:before {
         left: -20px;
     }
+    
     .t-row > div.six.columns {
         float: none;
         width: 95%;
@@ -563,22 +567,23 @@ there.
     {
         margin-top: 10px !important;
     }
-    .t-row > div.six.columns:first-child:before {
+    
+    .t-row > div.six.columns:before {
         top: 50px;
         right: 100%;
         border-right: 7px solid #d25349;
     }
-    .t-row > div:nth-child(2):before {
-        top: 50px;
-        right:100%;
-        border-right: 7px solid #d25349;
+    .t-row > div > .icon-column{
+        display: none;
     }
+    
 }
 
 @media (min-width: 750px) {
     .timeline > .container:before {
         left: calc(50% - 2px);
     }
+    /* Deactivated arrow icon for divs
     .t-row > div:first-child:before {
         top: 10%;
         left: 100%;
@@ -588,8 +593,17 @@ there.
         top: 10%;
         right: 100%;
         border-right: 7px solid #d25349;
+    }*/
+    /*  Special Icons For Divs*/
+    .t-row > div:nth-child(1) > .icon-column{
+        right: -7%;
+        top: 8%;
+    }
+    .t-row > div:nth-child(2) > .icon-column{
+        left: -7%;
+        top: 8%;
     }
 }
 /* Larger than Desktop HD */
 
-@media (min-width: 1200px) {}
+@media (max-width: 1150)
