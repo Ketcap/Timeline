@@ -6,25 +6,24 @@ $(document).ready(function () {
         $(this).css({
             marginTop: prevHeight / 2,
         })
-
     })
 
     $(".t-row:last-child > div:nth-child(2)").css({
         marginBottom: $(".t-row:last-child > div:nth-child(2)").height() * 0.50,
     })
 
-    function isScrolledIntoView(ele) {
+    function isInView(ele) {
         var $ele = $(ele);
         var $window = $(window);
 
-        var docViewTop = $window.scrollTop();
-        var docViewBottom = docViewTop + $window.height();
+        var ViewTop = $window.scrollTop();
+        var ViewBottom = ViewTop + $window.height();
 
         var eleTop = $ele.offset().top;
-        var eleBottom = eleTop + $ele.height()/2;
-
-        /*return ((docViewTop < eleTop) && (docViewBottom > eleBottom));*/
-        return ((eleBottom <= docViewBottom) && (eleTop >= docViewTop));
+        var eleBottom = eleTop + $ele.height();
+        var eleCenter = (eleTop + eleBottom) / 2 ;
+        
+        return ( eleCenter > ViewTop && eleCenter < ViewBottom )
     }
 
     function changeEase(element, ease, animSpeed) {
@@ -42,7 +41,7 @@ $(document).ready(function () {
     function showElements() {
         $(".t-row > div").each(function () {
             _this = $(this);
-            if (isScrolledIntoView(_this)) {
+            if (isInView(_this)) {
                 changeEase(_this, "cubic-bezier(0.175, 0.885, 0.320, 1.275)", 600)
                 _this.css({
                     "-ms-transform": "scale(1)",
@@ -64,7 +63,7 @@ $(document).ready(function () {
             }
         })
     }
-    showElements();
+    
     $(window).scroll(function () {
         showElements();
     })

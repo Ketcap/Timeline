@@ -576,6 +576,22 @@ there.
     .t-row > div > .icon-column{
         display: none;
     }
+    .separator{
+        width: 95%;
+        height: 35px;
+        margin:10px 0 10px 0;
+    }
+    .separator:before{
+        position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+        top: calc(50% - 9px);
+        left: -7px;
+        border-right: 7px solid #d25349;
+    }
     
 }
 
@@ -602,6 +618,11 @@ there.
     .t-row > div:nth-child(2) > .icon-column{
         left: -7%;
         top: 8%;
+    }
+    .separator{
+        width: 50%;
+        height: 35px;
+        margin:10px auto 10px auto;
     }
 }
 /* Larger than Desktop HD */
