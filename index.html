@@ -21,6 +21,7 @@
     -------------------------------------------- -->
 
     <script src="jquery/jquery-2.1.4.min.js"></script>
+    <script src="jquery/ease.js"></script>
     <script src="jquery/custom.js"></script>
 
 </head>
@@ -29,9 +30,9 @@
     <div class="row header">
         <div class="container">
             <div class="row menu">
-                <span class="three columns"><i class="fa fa-home"></i> Home</span>
-                <span class="three columns"><i class="fa fa-search"></i> Search</span>
-                <span class="three columns"><i class="fa fa-info"></i> About</span>
+                <span class="three columns" to="Seperator1"><i class="fa fa-home"></i> Home</span>
+                <span class="three columns" to="Seperator2"><i class="fa fa-search"></i> Search</span>
+                <span class="three columns" to="Seperator3"><i class="fa fa-info"></i> About</span>
                 <span class="three columns"><i class="fa fa-user"></i> Profile</span>
             </div>
         </div>
@@ -49,7 +50,7 @@
                 </div>
 
             </div>
-            <div class="row">
+            <div class="row" data="Seperator1">
                 <div class="separator">
                     <i class="fa fa-angle-double-down"></i> Just A Seperator
                 </div>
@@ -65,10 +66,70 @@
                 </div>
 
             </div>
-            <div class="row">
+            <div class="row t-row">
+                <div class="six columns">
+                    <div class="icon-column"><i class="fa fa-picture-o"></i>
+                    </div>
+                </div>
+                <div class="six columns">
+                    <div class="icon-column"><i class="fa fa-file-o"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row t-row">
+                <div class="six columns">
+                    <div class="icon-column"><i class="fa fa-picture-o"></i>
+                    </div>
+                </div>
+                <div class="six columns">
+                    <div class="icon-column"><i class="fa fa-file-o"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" data="Seperator2">
                 <div class="separator">
                     <i class="fa fa-coffee"></i> Take A Coffee
                 </div>
+            </div>
+            <div class="row t-row">
+                <div class="six columns">
+                    <div class="icon-column"><i class="fa fa-picture-o"></i>
+                    </div>
+                </div>
+                <div class="six columns">
+                    <div class="icon-column"><i class="fa fa-file-o"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row t-row">
+                <div class="six columns">
+                    <div class="icon-column"><i class="fa fa-picture-o"></i>
+                    </div>
+                </div>
+                <div class="six columns">
+                    <div class="icon-column"><i class="fa fa-file-o"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" data="Seperator3">
+                <div class="separator">
+                    <i class="fa fa-coffee"></i> Ohh Wait
+                </div>
+            </div>
+            <div class="row t-row">
+                <div class="six columns">
+                    <div class="icon-column"><i class="fa fa-picture-o"></i>
+                    </div>
+                </div>
+                <div class="six columns">
+                    <div class="icon-column"><i class="fa fa-file-o"></i>
+                    </div>
+                </div>
+
             </div>
             <div class="row t-row">
                 <div class="six columns">

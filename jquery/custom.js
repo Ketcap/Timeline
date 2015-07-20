@@ -67,5 +67,19 @@ $(document).ready(function () {
     $(window).scroll(function () {
         showElements();
     })
-
+    
+    
+    $(".menu > span").on("click",function(){
+        var to  = $(this).attr("to");
+        var go = $('.row [data='+to+']').offset().top;
+        sec = parseInt(go / 100)*50
+        if (sec < 500){duration=500;}else{duration=sec};
+        console.log(duration);
+        $("html , body").animate({
+            scrollTop: go ,
+        },duration,"easeInOutQuart");
+    })
+    
+    
 })
+
