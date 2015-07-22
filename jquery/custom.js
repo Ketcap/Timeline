@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    $("html,body").animate({ scrollTop : 0});
     $(".t-row > div:nth-child(2)").each(function () {
         prev = $(this).prev();
         prevHeight = prev.height();
