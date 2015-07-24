@@ -1,15 +1,19 @@
-$(document).ready(function () {
-    $("html,body").animate({ scrollTop : 0});
-    $(".t-row > div:nth-child(2)").each(function () {
-        prev = $(this).prev();
+$(window).load(function() {/* After All Dom Elements loaded */ 
+    
+    $("html,body").animate({
+        scrollTop: 0
+    },500);
+    $(".t-row > div:nth-of-type(2)").each(function () {
+        prev = $(this).prev(".six.columns");
         prevHeight = prev.height();
+        console.log(prevHeight);
         $(this).css({
-            marginTop: prevHeight / 2,
+            marginTop: prevHeight / 2 + "px",
         })
     })
 
     $(".t-row:last-child > div:nth-child(2)").css({
-        marginBottom: $(".t-row:last-child > div:nth-child(2)").height() * 0.50,
+        marginBottom: $(".t-row:last-child > div:nth-of-type(2)").height() * 0.50,
     })
 
     function isInView(ele) {
@@ -21,9 +25,9 @@ $(document).ready(function () {
 
         var eleTop = $ele.offset().top;
         var eleBottom = eleTop + $ele.height();
-        var eleCenter = (eleTop + eleBottom) / 2 ;
-        
-        return ( eleCenter > ViewTop && eleCenter < ViewBottom )
+        var eleCenter = (eleTop + eleBottom) / 2;
+
+        return (eleCenter >= ViewTop && eleCenter <= ViewBottom)
     }
 
     function changeEase(element, ease, animSpeed) {
@@ -63,23 +67,26 @@ $(document).ready(function () {
             }
         })
     }
-    
+
     $(window).scroll(function () {
         showElements();
     })
-    
-    
-    $(".menu > span").on("click",function(){
-        var to  = $(this).attr("to");
-        var go = $('.row [data='+to+']').offset().top;
-        sec = parseInt(go / 100)*50
-        if (sec < 500){duration=500;}else{duration=sec};
+
+
+    $(".menu > span").on("click", function () {
+        var to = $(this).attr("to");
+        var go = $('.row [data=' + to + ']').offset().top;
+        sec = parseInt(go / 100) * 50
+        if (sec < 500) {
+            duration = 500;
+        } else {
+            duration = sec
+        };
         console.log(duration);
         $("html , body").animate({
-            scrollTop: go ,
-        },duration,"easeInOutQuart");
+            scrollTop: go,
+        }, duration, "easeInOutQuart");
     })
-    
-    
-})
 
+
+})
