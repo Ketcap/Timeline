@@ -42,6 +42,7 @@ img
     background: #FFF;
     box-shadow: 0 0px 8px 0px rgba(0, 0, 0, 0.10);
     min-height: 100px;
+    padding: 5px
 }
 
 .timeline > .container {
@@ -111,4 +112,7 @@ img
     background: #d25349;
     border-radius: 50%;
     border:2px solid #f9f9f9;
+}
+.t-row > div > h1,h2,h3,h4,h5,h6,p {
+    text-indent: 20px;
 }

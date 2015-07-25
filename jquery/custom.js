@@ -82,7 +82,6 @@ $(window).load(function() {/* After All Dom Elements loaded */
         } else {
             duration = sec
         };
-        console.log(duration);
         $("html , body").animate({
             scrollTop: go,
         }, duration, "easeInOutQuart");
