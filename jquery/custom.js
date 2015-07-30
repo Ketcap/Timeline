@@ -72,7 +72,28 @@ $(window).load(function() {/* After All Dom Elements loaded */
         showElements();
     })
 
-
+    $(".menu-open").on("click",function(){
+        if($(this).attr("state")=="closed")
+           {
+            $(this).siblings(".menu").css({
+                height:"auto",
+                overflow:"visible",
+            })
+            $(this).attr({
+                state:"opened"
+            })
+        }
+        else{
+        $(this).siblings(".menu").css({
+                height:"0",
+                overflow:"hidden",
+            })
+            $(this).attr({
+                state:"closed"
+            })
+        }
+    })
+    
     $(".menu > span").on("click", function () {
         var to = $(this).attr("to");
         var go = $('.row [data=' + to + ']').offset().top;

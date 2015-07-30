@@ -546,18 +546,18 @@ there.
 /* Larger than tablet */
 
 @media (max-width: 399px) {
-    .timeline > .container:before {
+    /*.timeline > .container:before {
         left: 5px !important;
-    }
+    }*/
     .t-row > div > .icon-column {
         display: none;
     }
 }
 
 @media (max-width: 750px) {
-    .timeline > .container:before {
+    /*.timeline > .container:before {
         left: -20px;
-    }
+    }*/
     .t-row > div.six.columns {
         float: none;
         width: 95%;
@@ -566,11 +566,11 @@ there.
     .t-row > div.six.columns:nth-child(2) {
         margin-top: 10px !important;
     }
-    .t-row > div.six.columns:before {
+    /*.t-row > div.six.columns:before {
         top: 50px;
         right: 100%;
         border-right: 7px solid #d25349;
-    }
+    }*/
     .t-row > div > .icon-column {
         right: -17px;
         top: 10%;
@@ -580,7 +580,7 @@ there.
         height: 35px;
         margin: 10px 0 10px 0;
     }
-    .separator:before {
+    /*.separator:before {
         position: absolute;
         content: '';
         height: 0;
@@ -590,7 +590,7 @@ there.
         top: calc(50% - 9px);
         left: -7px;
         border-right: 7px solid #d25349;
-    }
+    }*/    
     .t-row > div> * > * > .content-icon:nth-of-type(1)
     {
         bottom: 0;
@@ -601,14 +601,20 @@ there.
         bottom: 36px;
         right: -17px;
     }
+    .fixed {
+    display: block;
+    }
+    .row.header{
+    display: none;
+    }
     
     
 }
 
 @media (min-width: 750px) {
-    .timeline > .container:before {
+    /*.timeline > .container:before {
         left: calc(50% - 2px);
-    }
+    }*/
     /* Deactivated arrow icon for divs
     .t-row > div:first-child:before {
         top: 10%;
@@ -657,6 +663,9 @@ there.
         bottom: -17px;
         right: 36px;
     }
+    .fixed {
+    display: none;
+    } 
 }
 /* Larger than Desktop HD */
 
